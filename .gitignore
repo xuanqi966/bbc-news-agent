@@ -1,0 +1,38 @@
+# Env / secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# uv
+.uv/
+uv.lock
+
+# Data & generated artifacts — keep directories via .gitkeep, ignore contents
+data/raw/*
+data/clustered/*
+data/scraped/*
+analysis/static/*
+analysis/semantic/*
+output/*
+!**/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
