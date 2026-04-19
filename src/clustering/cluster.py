@@ -26,6 +26,7 @@ from pydantic import BaseModel, Field
 
 from src import config
 from src.llm import LLMProvider, get_provider
+from src.llm.tracing import traced
 from src.scraping.scraper import _normalise_url
 
 SEED = 42
@@ -127,6 +128,7 @@ def _build_classification_prompt(items: list[tuple[str, str]]) -> str:
     return "\n".join(parts)
 
 
+@traced("cluster_classifier")
 def _classify_batch_via_llm(
     items: list[tuple[str, str]], provider: LLMProvider
 ) -> list[str]:

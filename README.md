@@ -28,7 +28,23 @@ Each stage is a standalone script under `scripts/` so it can be run and debugged
 | 2. Scrape | `scripts/02_scrape.py` | `data/clustered/` | `data/scraped/<category>/*.json` |
 | 3. Analyze | `scripts/03_analyze.py` | `data/scraped/` | `analysis/static/stats.json`, `analysis/semantic/<category>.md` |
 | 4. Style guide | `scripts/04_generate_style.py` | `analysis/` | `output/style_guide/_preamble.md` + `output/style_guide/<category>.md` |
-| 5. Run agent | `scripts/05_run_agent.py` | `output/style_guide/` + user topic | generated article (stdout) |
+| 5. Run agent | `scripts/05_run_agent.py` | `output/style_guide/` + user topic + source text in `inputs/` | `output/generated/<timestamp>_<category>/` (article, outline, reviews, trace) |
+
+Run stages individually:
+
+```bash
+uv run python -m scripts.01_cluster
+uv run python -m scripts.02_scrape
+uv run python -m scripts.03_analyze
+uv run python -m scripts.04_generate_style
+uv run python -m scripts.05_run_agent --category politics --facts inputs/politics_example.txt
+```
+
+Example `--facts` files live in [inputs/](inputs/).
+
+## Observability
+
+Every LLM call and every agent entrypoint emits an OpenTelemetry span (using the `gen_ai.*` semantic conventions) written to `output/traces/<timestamp>_<stage>.jsonl`. See [docs/OBSERVABILITY.md](docs/OBSERVABILITY.md) for the span schema and upgrade path to a hosted backend (Langfuse / Phoenix / OTLP).
 
 ## Layout
 

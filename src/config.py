@@ -27,6 +27,8 @@ SEMANTIC_ANALYSIS_DIR = ANALYSIS_DIR / "semantic"
 
 OUTPUT_DIR = PROJECT_ROOT / "output"
 STYLE_GUIDE_DIR = OUTPUT_DIR / "style_guide"
+GENERATED_DIR = OUTPUT_DIR / "generated"
+TRACES_DIR = OUTPUT_DIR / "traces"
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
@@ -34,7 +36,22 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "anthropic/claude-sonnet-4-6")
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
 
+OPENROUTER_EDITOR_MODEL = os.getenv("OPENROUTER_EDITOR_MODEL", "google/gemini-3.1-pro-preview")
+ANTHROPIC_EDITOR_MODEL = os.getenv("ANTHROPIC_EDITOR_MODEL", "claude-opus-4-7")
+
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+
+
+def editor_model() -> str:
+    """Return the model string for the editor role, matched to the active provider.
+
+    Mirrors :func:`src.llm.factory.get_provider` selection order: OpenRouter first
+    if its key is set, else Anthropic. Used by :func:`src.agents.editor.review_draft`
+    to route the LLM-as-judge call to a stronger model than the writer uses.
+    """
+    if OPENROUTER_API_KEY:
+        return OPENROUTER_EDITOR_MODEL
+    return ANTHROPIC_EDITOR_MODEL
 
 
 def ensure_dirs() -> None:
@@ -48,5 +65,7 @@ def ensure_dirs() -> None:
         SEMANTIC_ANALYSIS_DIR,
         OUTPUT_DIR,
         STYLE_GUIDE_DIR,
+        GENERATED_DIR,
+        TRACES_DIR,
     ):
         d.mkdir(parents=True, exist_ok=True)

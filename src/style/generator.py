@@ -22,6 +22,7 @@ from src import config
 from src.analyzers.static import StaticStats, render_stats_brief
 from src.clustering.cluster import TAXONOMY
 from src.llm import LLMProvider, get_provider
+from src.llm.tracing import traced
 
 EMITTED_CATEGORIES = [c for c in TAXONOMY if c != "other"]
 
@@ -117,6 +118,7 @@ def _write_category_file(out_dir: Path, guide: CategoryGuide) -> Path:
     return path
 
 
+@traced("style_generator")
 def generate_style_guide(
     stats_path: Path | None = None,
     semantic_dir: Path | None = None,

@@ -16,6 +16,7 @@ from pydantic import BaseModel, Field
 
 from src import config
 from src.llm import LLMProvider, get_provider
+from src.llm.tracing import traced
 from src.scraping.scraper import ScrapedArticle
 
 SAMPLE_SIZE = 5
@@ -131,6 +132,7 @@ def build_semantic_prompt(category: str, articles: list[ScrapedArticle]) -> str:
     )
 
 
+@traced("semantic_analyzer")
 def analyze_category(
     category: str,
     articles: list[ScrapedArticle],

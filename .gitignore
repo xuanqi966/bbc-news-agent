@@ -21,7 +21,6 @@ env/
 
 # uv
 .uv/
-uv.lock
 
 # Data & generated artifacts — keep directories via .gitkeep, ignore contents
 data/raw/*

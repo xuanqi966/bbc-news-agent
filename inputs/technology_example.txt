@@ -1,0 +1,17 @@
+Topic: UK regulator fines a social media platform over child safety failures
+
+Raw material:
+
+Ofcom, the UK's communications regulator, has issued a £42 million fine against the short-video platform ClipWave for failing to meet its duties under the Online Safety Act.
+
+The penalty was announced on Wednesday following a 14-month investigation. Ofcom found that ClipWave failed to take down content depicting self-harm within the four-hour window mandated by its own published guidelines in 63% of sampled cases, and that its age-verification system allowed accounts identified as under-13 to remain active for an average of 11 days after detection.
+
+ClipWave has approximately 8.2 million UK users, of whom an estimated 1.4 million are aged between 13 and 17, according to figures published by the company in its last transparency report.
+
+Ofcom's Chief Executive Dame Melanie Dawes said: "We have been clear with platforms that compliance is not optional. A company of this scale cannot credibly claim that the tools needed to protect young users are beyond its reach."
+
+In a statement, ClipWave said it "respectfully disagrees with several of Ofcom's findings" and would lodge an appeal. The company said it had already invested £180 million in trust-and-safety operations over the past 18 months, doubling the size of its content-moderation team.
+
+The Molly Rose Foundation, set up after the death of 14-year-old Molly Russell, welcomed the fine but described it as "the floor, not the ceiling" of enforcement. Its director, Andy Burrows, said regulators should consider banning non-compliant platforms from operating in the UK in the case of repeated failures.
+
+The Online Safety Act, passed in October 2023, allows Ofcom to levy fines of up to £18 million or 10% of global turnover, whichever is higher. ClipWave's global annual turnover was reported as $1.4 billion for the 2024 financial year.

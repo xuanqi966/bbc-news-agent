@@ -67,7 +67,7 @@ class OpenRouterProvider:
                 "json_schema": {
                     "name": schema.__name__,
                     "schema": schema.model_json_schema(),
-                    "strict": True,
+                    "strict": False,
                 },
             },
         )
