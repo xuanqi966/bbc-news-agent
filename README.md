@@ -27,8 +27,8 @@ Each stage is a standalone script under `scripts/` so it can be run and debugged
 | 1. Cluster | `scripts/01_cluster.py` | `data/raw/*.csv` | `data/clustered/` (cluster assignments, top terms per cluster) |
 | 2. Scrape | `scripts/02_scrape.py` | `data/clustered/` | `data/scraped/<category>/*.json` |
 | 3. Analyze | `scripts/03_analyze.py` | `data/scraped/` | `analysis/static/stats.json`, `analysis/semantic/<category>.md` |
-| 4. Style guide | `scripts/04_generate_style.py` | `analysis/` | `output/style_guide.md` |
-| 5. Run agent | `scripts/05_run_agent.py` | `output/style_guide.md` + user topic | generated article (stdout) |
+| 4. Style guide | `scripts/04_generate_style.py` | `analysis/` | `output/style_guide/_preamble.md` + `output/style_guide/<category>.md` |
+| 5. Run agent | `scripts/05_run_agent.py` | `output/style_guide/` + user topic | generated article (stdout) |
 
 ## Layout
 

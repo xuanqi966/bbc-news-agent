@@ -19,13 +19,14 @@ DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 CLUSTERED_DIR = DATA_DIR / "clustered"
 SCRAPED_DIR = DATA_DIR / "scraped"
+EXAMPLES_DIR = DATA_DIR / "examples"
 
 ANALYSIS_DIR = PROJECT_ROOT / "analysis"
 STATIC_ANALYSIS_DIR = ANALYSIS_DIR / "static"
 SEMANTIC_ANALYSIS_DIR = ANALYSIS_DIR / "semantic"
 
 OUTPUT_DIR = PROJECT_ROOT / "output"
-STYLE_GUIDE_PATH = OUTPUT_DIR / "style_guide.md"
+STYLE_GUIDE_DIR = OUTPUT_DIR / "style_guide"
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
@@ -42,8 +43,10 @@ def ensure_dirs() -> None:
         RAW_DIR,
         CLUSTERED_DIR,
         SCRAPED_DIR,
+        EXAMPLES_DIR,
         STATIC_ANALYSIS_DIR,
         SEMANTIC_ANALYSIS_DIR,
         OUTPUT_DIR,
+        STYLE_GUIDE_DIR,
     ):
         d.mkdir(parents=True, exist_ok=True)

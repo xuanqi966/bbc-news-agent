@@ -7,11 +7,13 @@ into ``data/clustered/``.
 from __future__ import annotations
 
 from src import config
+from src.clustering.cluster import run_clustering
 
 
 def main() -> None:
     config.ensure_dirs()
-    raise NotImplementedError
+    path = run_clustering()
+    print(f"[cluster] manifest written to {path}")
 
 
 if __name__ == "__main__":
