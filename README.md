@@ -14,6 +14,37 @@ Pre-generated output from one full end-to-end run lives in [samples/](samples/) 
 
 ---
 
+## Problem framing & core assumptions
+
+The take-home prompt was deliberately open:
+
+> Using the BBC News dataset from Kaggle, design a backend AI agentic workflow that generates news articles resembling BBC-style content based on user inputs such as topics. Your workflow should include: content analysis, content generation, and a review/QA step.
+
+I narrowed the scope to a concrete, evaluable specification:
+
+**Usage model**
+
+1. The user picks a **category** from a predefined taxonomy (politics, business, sports, technology, world, uk_news, health, science, entertainment).
+2. The user supplies **raw material** — facts, figures, direct quotes, interview snippets — in a plaintext `--facts` file.
+3. The pipeline produces a BBC-style article grounded strictly in that material. It invents nothing.
+
+**Core assumptions**
+
+These shape every downstream design decision:
+
+- **Grounding is strict, not best-effort.** Every fact, entity, figure, date, and quote in the final article must trace to the user's raw material. World-knowledge injection is treated as a violation even when factually correct. This is the single load-bearing constraint of the system — the planner, writer, and editor all enforce it.
+- **Category is a style selector, not a content generator.** Facts come from the user; voice comes from the category's style guide. A "politics" article about housing is shaped like a BBC politics piece, but its content is entirely the user's.
+- **Thin material should be rejected, not padded.** If the user supplies a one-line tip, the correct output is a ~200-word brief or an explicit rejection — never a padded 700-word article filled with invented context. The planner gates sufficiency up-front.
+- **Style is reverse-engineered from the corpus, not hand-written.** No human writes "BBC politics articles use a 'claim vs reality' framework." The semantic analyzer reads real articles and discovers per-category directive bullets, which the style generator then merges with statistical structure ranges from the static analyzer.
+- **Quality control is LLM-as-judge against the style guide, not a rubric.** A stronger editor model grades a smaller writer model on three structured checks: grounding, style, attribution. Approved-only-if-issues-trivial.
+- **Observability is first-class, not an afterthought.** Every LLM call emits a `gen_ai.*` span and every agent entrypoint nests under a role-tagged parent. Debugging a bad generation means reading the span tree, not sprinkling print statements.
+- **The 10-category taxonomy is known a priori**, so "clustering" is actually classification via URL-path regex + LLM fallback for the headerless tail — not TF-IDF/KMeans reverse-discovery.
+- **MVP over production hardening.** Regex sentence splitting, `html.parser`, no retry logic, rate-limited sequential scraping, single-round revision loop. The take-home is a design exercise; production-grade choices are called out explicitly in the **Key decisions & tradeoffs** table below.
+
+Where these assumptions map into the code is called out throughout the **Design** section.
+
+---
+
 ## Reviewing without running — start here
 
 If you want to skim what the system produces:
