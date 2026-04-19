@@ -1,0 +1,378 @@
+{
+  "categories": [
+    {
+      "category": "business",
+      "article_count": 20,
+      "word_count": {
+        "p25": 645.0,
+        "p50": 793.0,
+        "p75": 1053.5
+      },
+      "paragraph_length_words": {
+        "p25": 15.0,
+        "p50": 23.0,
+        "p75": 30.0
+      },
+      "sentence_length_words": {
+        "p25": 14.0,
+        "p50": 21.0,
+        "p75": 28.0
+      },
+      "quotes_per_article": {
+        "p25": 5.75,
+        "p50": 9.0,
+        "p75": 17.0
+      },
+      "headline_word_count": {
+        "p25": 8.0,
+        "p50": 9.5,
+        "p75": 11.0
+      },
+      "lede_word_count": {
+        "p25": 18.0,
+        "p50": 23.0,
+        "p75": 28.0
+      }
+    },
+    {
+      "category": "entertainment",
+      "article_count": 20,
+      "word_count": {
+        "p25": 284.25,
+        "p50": 707.5,
+        "p75": 962.5
+      },
+      "paragraph_length_words": {
+        "p25": 15.0,
+        "p50": 22.0,
+        "p75": 29.0
+      },
+      "sentence_length_words": {
+        "p25": 9.0,
+        "p50": 18.0,
+        "p75": 25.0
+      },
+      "quotes_per_article": {
+        "p25": 2.25,
+        "p50": 8.0,
+        "p75": 17.75
+      },
+      "headline_word_count": {
+        "p25": 8.75,
+        "p50": 11.0,
+        "p75": 12.0
+      },
+      "lede_word_count": {
+        "p25": 21.5,
+        "p50": 22.5,
+        "p75": 25.75
+      }
+    },
+    {
+      "category": "health",
+      "article_count": 20,
+      "word_count": {
+        "p25": 678.5,
+        "p50": 796.0,
+        "p75": 1111.5
+      },
+      "paragraph_length_words": {
+        "p25": 15.0,
+        "p50": 22.0,
+        "p75": 29.0
+      },
+      "sentence_length_words": {
+        "p25": 14.0,
+        "p50": 20.0,
+        "p75": 27.0
+      },
+      "quotes_per_article": {
+        "p25": 7.5,
+        "p50": 12.0,
+        "p75": 20.25
+      },
+      "headline_word_count": {
+        "p25": 8.0,
+        "p50": 9.0,
+        "p75": 10.0
+      },
+      "lede_word_count": {
+        "p25": 19.0,
+        "p50": 21.5,
+        "p75": 25.25
+      }
+    },
+    {
+      "category": "other",
+      "article_count": 15,
+      "word_count": {
+        "p25": 452.0,
+        "p50": 580.0,
+        "p75": 1034.5
+      },
+      "paragraph_length_words": {
+        "p25": 16.0,
+        "p50": 23.0,
+        "p75": 31.25
+      },
+      "sentence_length_words": {
+        "p25": 15.0,
+        "p50": 22.0,
+        "p75": 30.0
+      },
+      "quotes_per_article": {
+        "p25": 8.0,
+        "p50": 14.0,
+        "p75": 19.0
+      },
+      "headline_word_count": {
+        "p25": 9.0,
+        "p50": 9.0,
+        "p75": 11.0
+      },
+      "lede_word_count": {
+        "p25": 17.5,
+        "p50": 20.0,
+        "p75": 24.0
+      }
+    },
+    {
+      "category": "politics",
+      "article_count": 20,
+      "word_count": {
+        "p25": 586.25,
+        "p50": 797.0,
+        "p75": 874.5
+      },
+      "paragraph_length_words": {
+        "p25": 13.0,
+        "p50": 22.0,
+        "p75": 28.0
+      },
+      "sentence_length_words": {
+        "p25": 16.75,
+        "p50": 23.0,
+        "p75": 29.0
+      },
+      "quotes_per_article": {
+        "p25": 5.75,
+        "p50": 8.5,
+        "p75": 18.0
+      },
+      "headline_word_count": {
+        "p25": 8.75,
+        "p50": 10.0,
+        "p75": 11.0
+      },
+      "lede_word_count": {
+        "p25": 17.0,
+        "p50": 21.5,
+        "p75": 24.25
+      }
+    },
+    {
+      "category": "science",
+      "article_count": 20,
+      "word_count": {
+        "p25": 574.5,
+        "p50": 826.5,
+        "p75": 936.5
+      },
+      "paragraph_length_words": {
+        "p25": 17.0,
+        "p50": 24.0,
+        "p75": 33.0
+      },
+      "sentence_length_words": {
+        "p25": 15.0,
+        "p50": 21.0,
+        "p75": 29.0
+      },
+      "quotes_per_article": {
+        "p25": 5.0,
+        "p50": 10.0,
+        "p75": 13.25
+      },
+      "headline_word_count": {
+        "p25": 7.75,
+        "p50": 8.5,
+        "p75": 10.25
+      },
+      "lede_word_count": {
+        "p25": 19.0,
+        "p50": 21.5,
+        "p75": 26.0
+      }
+    },
+    {
+      "category": "sports",
+      "article_count": 20,
+      "word_count": {
+        "p25": 348.25,
+        "p50": 630.5,
+        "p75": 819.25
+      },
+      "paragraph_length_words": {
+        "p25": 17.0,
+        "p50": 23.0,
+        "p75": 31.0
+      },
+      "sentence_length_words": {
+        "p25": 16.0,
+        "p50": 22.0,
+        "p75": 30.0
+      },
+      "quotes_per_article": {
+        "p25": 1.75,
+        "p50": 7.5,
+        "p75": 14.75
+      },
+      "headline_word_count": {
+        "p25": 10.0,
+        "p50": 13.5,
+        "p75": 14.25
+      },
+      "lede_word_count": {
+        "p25": 9.5,
+        "p50": 19.5,
+        "p75": 24.5
+      }
+    },
+    {
+      "category": "technology",
+      "article_count": 20,
+      "word_count": {
+        "p25": 564.0,
+        "p50": 877.0,
+        "p75": 1006.75
+      },
+      "paragraph_length_words": {
+        "p25": 17.0,
+        "p50": 24.0,
+        "p75": 32.0
+      },
+      "sentence_length_words": {
+        "p25": 16.0,
+        "p50": 22.0,
+        "p75": 29.0
+      },
+      "quotes_per_article": {
+        "p25": 7.75,
+        "p50": 9.0,
+        "p75": 14.0
+      },
+      "headline_word_count": {
+        "p25": 8.0,
+        "p50": 9.0,
+        "p75": 10.25
+      },
+      "lede_word_count": {
+        "p25": 17.75,
+        "p50": 20.0,
+        "p75": 24.25
+      }
+    },
+    {
+      "category": "uk_news",
+      "article_count": 20,
+      "word_count": {
+        "p25": 351.25,
+        "p50": 635.0,
+        "p75": 898.25
+      },
+      "paragraph_length_words": {
+        "p25": 15.0,
+        "p50": 22.0,
+        "p75": 29.0
+      },
+      "sentence_length_words": {
+        "p25": 15.0,
+        "p50": 21.0,
+        "p75": 29.0
+      },
+      "quotes_per_article": {
+        "p25": 4.0,
+        "p50": 7.5,
+        "p75": 12.25
+      },
+      "headline_word_count": {
+        "p25": 8.75,
+        "p50": 9.0,
+        "p75": 10.0
+      },
+      "lede_word_count": {
+        "p25": 15.5,
+        "p50": 19.5,
+        "p75": 24.0
+      }
+    },
+    {
+      "category": "world",
+      "article_count": 20,
+      "word_count": {
+        "p25": 466.75,
+        "p50": 744.5,
+        "p75": 1009.0
+      },
+      "paragraph_length_words": {
+        "p25": 16.0,
+        "p50": 24.0,
+        "p75": 32.0
+      },
+      "sentence_length_words": {
+        "p25": 14.0,
+        "p50": 20.0,
+        "p75": 27.0
+      },
+      "quotes_per_article": {
+        "p25": 5.25,
+        "p50": 9.0,
+        "p75": 14.25
+      },
+      "headline_word_count": {
+        "p25": 8.0,
+        "p50": 9.5,
+        "p75": 11.0
+      },
+      "lede_word_count": {
+        "p25": 19.25,
+        "p50": 24.5,
+        "p75": 30.25
+      }
+    }
+  ],
+  "overall": {
+    "category": "overall",
+    "article_count": 195,
+    "word_count": {
+      "p25": 529.0,
+      "p50": 740.0,
+      "p75": 959.0
+    },
+    "paragraph_length_words": {
+      "p25": 16.0,
+      "p50": 23.0,
+      "p75": 30.0
+    },
+    "sentence_length_words": {
+      "p25": 14.0,
+      "p50": 21.0,
+      "p75": 28.0
+    },
+    "quotes_per_article": {
+      "p25": 5.0,
+      "p50": 9.0,
+      "p75": 16.5
+    },
+    "headline_word_count": {
+      "p25": 8.0,
+      "p50": 10.0,
+      "p75": 11.0
+    },
+    "lede_word_count": {
+      "p25": 18.0,
+      "p50": 22.0,
+      "p75": 26.0
+    }
+  }
+}

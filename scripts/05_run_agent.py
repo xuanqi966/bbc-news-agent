@@ -10,8 +10,8 @@ Usage:
 Pipeline: planner → writer → editor (LLM-as-judge) → optional 1-round revise.
 
 Artifacts are always persisted to a per-run directory (``output/generated/<timestamp>_<category>/``
-by default, overridable with ``--out``). Article markdown also prints to stdout
-so ``> article.md`` keeps working. Editor trace goes to stderr.
+by default, overridable with ``--out``). Stdout stays quiet — the article lives in
+``article.md`` inside the run directory. Progress + editor feedback go to stderr.
 
 OpenTelemetry traces land in ``output/traces/<timestamp>_05_run_agent.jsonl``;
 the run directory's ``trace.json`` points at the file.
@@ -34,15 +34,12 @@ from src.llm.tracing import setup_tracing, traced
 
 def _log_review(label: str, review: EditorReview) -> None:
     print(
-        f"[editor] {label}: score={review.score:.1f}, approved={review.approved}",
+        f"[editor] {label}: score={review.score:.1f}, approved={review.approved} "
+        f"({len(review.grounding_issues)} grounding / "
+        f"{len(review.style_issues)} style / "
+        f"{len(review.attribution_issues)} attribution issues; see reviews.json)",
         file=sys.stderr,
     )
-    for g in review.grounding_issues:
-        print(f"[editor]   grounding: {g}", file=sys.stderr)
-    for s in review.style_issues:
-        print(f"[editor]   style: {s}", file=sys.stderr)
-    for a in review.attribution_issues:
-        print(f"[editor]   attribution: {a}", file=sys.stderr)
 
 
 def _resolve_run_dir(override: Path | None, category: str) -> Path:
@@ -118,7 +115,6 @@ def main() -> None:
             indent=2,
         )
     )
-    print(draft)
     print(f"[run] artifacts: {run_dir}", file=sys.stderr)
     print(f"[trace] {trace_file}", file=sys.stderr)
 

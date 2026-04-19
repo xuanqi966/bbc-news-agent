@@ -71,5 +71,13 @@ class OpenRouterProvider:
                 },
             },
         )
-        content = resp.choices[0].message.content or "{}"
+        content = resp.choices[0].message.content
+        if not content:
+            finish_reason = resp.choices[0].finish_reason
+            raise RuntimeError(
+                f"OpenRouter returned empty content for structured call "
+                f"(model={model or self.default_model}, schema={schema.__name__}, "
+                f"finish_reason={finish_reason!r}). The model likely does not support "
+                f"response_format=json_schema — try a different model."
+            )
         return schema.model_validate_json(content)

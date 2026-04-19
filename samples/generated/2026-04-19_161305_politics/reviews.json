@@ -1,0 +1,46 @@
+{
+  "initial": {
+    "approved": false,
+    "score": 4.0,
+    "strengths": [
+      "Successfully includes the mandated 'What does this mean?' section to explain the mechanics of power.",
+      "Headline (9 words) and lede (23 words) perfectly adhere to the strict length constraints.",
+      "Maintains an authoritative, neutral, and objective tone appropriate for a public service broadcaster."
+    ],
+    "grounding_issues": [
+      "The location 'Speaking in Manchester' is not in the provided facts.",
+      "The claim that making targets advisory was 'a move critics argued led to a slowdown in planning approvals' is not in the facts.",
+      "The phrase 'while protecting high-value natural spaces' introduces reasoning/characterisation not present in the facts.",
+      "The addition 'that risks overdevelopment without local consent' to Kemi Badenoch's quote is not in the facts.",
+      "The extrapolation 'Without more staff and funding, they argue, mandatory targets may remain aspirational' is not in the facts.",
+      "Specifying 'bricklayers, electricians, and carpenters' is a violation; the facts only mention a 'shortage of skilled trades'."
+    ],
+    "style_issues": [
+      "Article length is approximately 350 words, falling significantly short of the required 529\u2013959 word range.",
+      "The draft contains only 4 direct quotes, missing the required target of 5\u201316 direct quotes per article (though it did use all provided quote anchors)."
+    ],
+    "attribution_issues": [],
+    "suggested_revisions": [
+      "Remove all ungrounded embellishments, including the Manchester location, specific trades (bricklayers, etc.), and invented opposition reasoning.",
+      "Expand the article to meet the minimum 529-word count by elaborating strictly on the provided facts, such as the historical context of the 1977 building rates and the OBR estimates.",
+      "Ensure any connective tissue or transitional prose remains strictly neutral and does not assert new, unprovided claims about 'slowdowns' or 'high-value natural spaces'."
+    ]
+  },
+  "final": {
+    "approved": false,
+    "score": 8.5,
+    "strengths": [
+      "Successfully incorporates the 'What does this mean?' section required by the politics style guide.",
+      "Effectively uses historical benchmarks (the 1977 comparison) to contextualize the current housing targets.",
+      "Maintains a neutral, objective tone while triangulating between government claims, opposition criticism, and industry realities."
+    ],
+    "grounding_issues": [],
+    "style_issues": [
+      "Article length is approximately 430 words, falling short of the required 529\u2013959 word range."
+    ],
+    "attribution_issues": [],
+    "suggested_revisions": [
+      "Expand the article to meet the minimum 529-word count. You could achieve this by elaborating on the 'claim vs. reality' framework, perhaps detailing the specific administrative hurdles councils face or expanding on the skilled trades shortage mentioned by the HBF."
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "category": "politics",
+  "sufficient": true,
+  "rejection_reason": null,
+  "extracted_facts": [
+    "Prime Minister Keir Starmer announced a revised target to build 1.5 million new homes across England by 2029.",
+    "The target was increased from the previous figure of 1.2 million.",
+    "Housing Secretary Angela Rayner confirmed mandatory housing targets for local councils will be reintroduced.",
+    "Mandatory targets were made advisory in December 2023 under the previous Conservative government.",
+    "The Office for Budget Responsibility estimated in March that 300,000 new homes per year are required to meet the target.",
+    "A rate of 300,000 new homes per year has not been achieved in England since 1977.",
+    "Shadow Housing Secretary Kemi Badenoch criticized the plan as a press release pretending to be a policy.",
+    "The government published a review of the National Planning Policy Framework.",
+    "Proposals include releasing grey belt land, defined as previously developed or low-quality greenbelt.",
+    "A consultation on the reforms opens on 4 March and runs for eight weeks.",
+    "The Local Government Association warned that councils are fundamentally under-resourced to process applications.",
+    "The Home Builders Federation stated members could build 250,000 homes per year by 2027 if bottlenecks are removed.",
+    "The Home Builders Federation identified a shortage of skilled trades as a limiting factor."
+  ],
+  "quote_anchors": [
+    "We inherited a broken housing market, and tinkering at the edges will not fix it. This is about restoring the promise that hard work leads to a home of your own.",
+    "a press release pretending to be a policy",
+    "fundamentally under-resourced",
+    "grey belt"
+  ],
+  "target_word_count": 550,
+  "headline_options": [
+    "Starmer Sets 1.5 Million Home Target in Major Planning Reform",
+    "Government Reintroduces Mandatory Housing Targets to Tackle England's Shortage",
+    "Labour Unveils Grey Belt Housing Plan Amid Local Government Warnings"
+  ],
+  "lede_angle": "The UK government has committed to building 1.5 million homes by 2029, reintroducing mandatory local targets to address a long-standing national housing crisis.",
+  "sections": [
+    {
+      "angle": "Detail the Prime Minister's announcement in Manchester and the specific increase of the housing target to 1.5 million units."
+    },
+    {
+      "angle": "Explain the shift from advisory to mandatory council targets and the historical context of the 300,000-home annual requirement."
+    },
+    {
+      "angle": "Examine the National Planning Policy Framework review and the specific strategy for releasing 'grey belt' land for development."
+    },
+    {
+      "angle": "Present the opposition from Kemi Badenoch regarding overdevelopment and the practical concerns raised by the Local Government Association."
+    },
+    {
+      "angle": "Analyze the industry perspective from the Home Builders Federation regarding capacity constraints and the shortage of skilled trades."
+    }
+  ]
+}
